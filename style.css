@@ -1,6 +1,155 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+/* LEFT */
+.weather-input {
+  width: 25%;
+  position: fixed;
+  inset: 0;
+  background: #78c1f3;
+  padding: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.converter {
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+}
+
+.fa-search {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* AUTOCOMPLETE */
+.suggestions {
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  background: white;
+  list-style: none;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #f1f1f1;
+}
+
+.weatherIcon {
+  height: 140px;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+.temperature {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.temperature span {
+  font-size: 2rem;
+}
+
+.weather-output {
+  width: 75%;
+  margin-left: 25%;
+  padding: 2rem;
+  background: #f6f6f8;
+}
+
+.Highlights,
+.Forecast {
+  display: grid;
+  gap: 1rem;
+}
+
+.Highlights {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.Forecast {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.Highlights div,
+.Forecast div {
+  background: #78c1f3;
+  padding: 1rem;
+  border-radius: 20px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.forecast-desc {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .weather-input,
+  .weather-output {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+
+
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
   margin: 0px;
   padding: 0px;
   font-family: "Poppins";
@@ -169,4 +318,4 @@ body {
   text-align: center;
   padding-bottom: 5px;
   font-style: italic;
-}
+} */
